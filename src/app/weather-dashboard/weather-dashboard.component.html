@@ -1,0 +1,9 @@
+<div>
+    <input #cityInput type="text" placeholder="Enter city" (input)="search(cityInput.value)">
+    <div *ngIf="weatherData">
+      <h2>{{ weatherData.name }}</h2>
+      <p>Temperature: {{ weatherData.main.temp }}°C</p>
+      <p>Humidity: {{ weatherData.main.humidity }}%</p>
+      <p>Weather: {{ weatherData.weather[0].description }}</p>
+    </div>
+  </div>
